@@ -1,0 +1,1 @@
+ID Empleado;Apellido Paterno;Apellido Materno;Nombre;RFC;CURP;Fecha de Nacimiento;Escolaridad;Estado Civil;Colonia;Calle;Municipio;Código Postal;Teléfono;Género;ISSEMYM;Clave ISSEMYM;ID Unidad Org;Unidad Org;Dirección;ID de Plaza;Tipo de Plaza;Tipo de Servicio Público;ID Puesto;CCT;Lugar de Trabajo;Fecha de Ingreso al GEM;Fecha de Paga

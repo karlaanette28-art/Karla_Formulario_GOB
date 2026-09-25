@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registro de personas</title>
+
+    <link rel="stylesheet" href="../modelo/Registro.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <header>
+            <nav class="navbar">
+
+                <a href="#" class="logo">Menu</a>
+
+                <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+                    ☰
+                </button>
+
+                <div class="browser-menu" id="nav-links">
+                    <a href="inicio.html">Inicio</a>
+                    <a href="Registro de personas.html">Registro de personas</a>
+                    <a href="base de registros.html">Bases de datos</a>
+                </div>
+
+            </nav>
+        </header>
+
+
+        <h1>Registro de Personal de Nuevo Ingreso</h1>
+
+        <br>
+
+
+        <div class="formulario">
+
+            <h2>Registrar persona:</h2>
+
+
+            <!-- FORMULARIO -->
+        
+
+
+                <!-- APELLIDO PATERNO -->
+                <label for="apellido_paterno">
+                    Apellido Paterno:
+                </label>
+
+                <input
+                    type="text"
+                    id="apellido_paterno"
+                    name="Apellido_Paterno"
+                    required
+                >
+
+                <br><br>
+
+
+                <!-- APELLIDO MATERNO -->
+                <label for="apellido_materno">
+                    Apellido Materno:
+                </label>
+
+                <input
+                    type="text"
+                    id="apellido_materno"
+                    name="Apellido_Materno"
+                    required
+                >
+
+                <br><br>
+
+
+                <!-- NOMBRE -->
+                <label for="nombre">
+                    Nombre:
+                </label>
+
+                <input
+                    type="text"
+                    id="nombre"
+                    name="Nombre"
+                    required
+                >
+
+                <br><br>
+
+
+                <!-- RFC -->
+                <label for="rfc">
+                    RFC:
+                </label>
+
+                <input
+                    type="text"
+                    id="rfc"
+                    name="RFC"
+                    maxlength="13"
+                    required
+                >
+
+                <br><br>
+
+
+                <!-- CURP -->
+                <label for="curp">
+                    CURP:
+                </label>
+
+                <input
+                    type="text"
+                    id="curp"
+                    name="CURP"
+                    maxlength="18"
+                    required
+                >
+
+                <br><br>
+
+
+                <!-- FECHA DE NACIMIENTO -->
+                <label for="fecha_nacimiento">
+                    Fecha de Nacimiento:
+                </label>
+
+                <input
+                    type="date"
+                    id="fecha_nacimiento"
+                    name="Fecha_de_Nacimiento"
+                    required
+                >
+
+                <br><br>
+
+
+                <!-- ESCOLARIDAD -->
+                <label for="escolaridad">
+                    Escolaridad:
+                </label>
+
+                <select
+                    id="escolaridad"
+                    name="Escolaridad"
+                    required
+                >
+
+                    <option value="">
+                        Selecciona una opción
+                    </option>
+
+                    <option value="Primaria">
+                        Primaria
+                    </option>
+
+                    <option value="Secundaria">
+                        Secundaria
+                    </option>
+
+                    <option value="Preparatoria">
+                        Preparatoria
+                    </option>
+
+                    <option value="Universidad">
+                        Universidad
+                    </option>
+
+                    <option value="Posgrado">
+                        Posgrado
+                    </option>
+
+                </select>
+
+                <br><br>
+
+
+                <!-- ESTADO CIVIL -->
+                <label for="estado_civil">
+                    Estado Civil:
+                </label>
+
+                <input
+                    type="text"
+                    id="estado_civil"
+                    name="Estado_Civil"
+                    required
+                >
+
+                <br><br>
+
+
+                <!-- COLONIA -->
+                <label for="colonia">
+                    Colonia:
+                </label>
+
+                <input
+                    type="text"
+                    id="colonia"
+                    name="Colonia"
+                    required
+                >
+
+                <br><br>
+
+
+                <!-- CALLE -->
+                <label for="calle">
+                    Calle:
+                </label>
+
+                <input
+                    type="text"
+                    id="calle"
+                    name="Calle"
+                    required
+                >
+
+                <br><br>
+
+
+                <!-- MUNICIPIO -->
+                <label for="municipio">
+                    Municipio:
+                </label>
+
+                <input
+                    type="text"
+                    id="municipio"
+                    name="Municipio"
+                    required
+                >
+
+                <br><br>
+
+
+                <!-- CÓDIGO POSTAL -->
+                <label for="codigo_postal">
+                    Código Postal:
+                </label>
+
+                <input
+                    type="text"
+                    id="codigo_postal"
+                    name="Codigo_Postal"
+                    maxlength="5"
+                    required
+                >
+
+                <br><br>
+
+
+                <!-- TELÉFONO -->
+                <label for="telefono">
+                    Teléfono:
+                </label>
+
+                <input
+                    type="tel"
+                    id="telefono"
+                    name="Telefono"
+                    maxlength="10"
+                    required
+                >
+
+                <br><br>
+
+
+                <!-- BOTONES -->
+                <button type="submit">
+                    Guardar Registro
+                </button>
+
+                <button type="reset">
+                    Limpiar
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT DEL MENÚ -->
+    <script>
+
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        menuToggle.addEventListener("click", function () {
+
+            navLinks.classList.toggle("active");
+
+        });
+
+    </script>
+
+</body>
+
+</html>

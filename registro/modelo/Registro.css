@@ -1,0 +1,356 @@
+
+/* ==========================================
+   MENÚ DE NAVEGACIÓN (RESPONSIVO)
+   ========================================== */
+header {
+    background-color:#9c0000d0;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.navbar .logo {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.browser-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.browser-menu a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.browser-menu a:hover {
+    color: #160402;
+}
+
+/* Botón hamburguesa (oculto en PC) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+/* Contenedor principal con efecto glassmorphism sutil y bordes redondeados */
+.form-bonito {
+  max-width: 420px;
+  margin: 50px auto;
+  padding: 35px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgb(252, 3, 3);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Estilo general para cada grupo de campos */
+.form-bonito .grupo-input {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+/* Etiquetas flotantes o limpias */
+.form-bonito label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Inputs y textareas estilizados */
+.form-bonito input,
+.form-bonito textarea {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 14px;
+  color: #2d3748;
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* Sombra y cambio de color al escribir */
+.form-bonito input:focus,
+.form-bonito textarea:focus {
+  border-color: #9c0000b0;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+}
+
+/* Botón con degradado moderno y animación */
+.form-bonito button {
+  width: 100%;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, hsla(0, 98%, 43%, 0.541) 0%, #764ba2 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(118, 75, 162, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover al pasar el mouse */
+.form-bonito button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(118, 75, 162, 0.4);
+}
+
+.form-bonito button:active {
+  transform: translateY(0);
+}
+
+/* ==========================================
+   FORMULARIO EN CUADRÍCULA (GRID)
+   ========================================== */
+#registroForm {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.campo input, .campo select {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.campo input:focus {
+    border-color: #6b0c0c;
+    box-shadow: 0 0 5px rgba(121, 9, 9, 0.774);
+    outline: none;
+}
+
+/* Opciones de Radio */
+.opciones-radio {
+    grid-column: span 1;
+    background: #fafafa;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.opciones-radio label {
+    font-weight: bold;
+    color: #555;
+}
+
+.opciones-radio input {
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+/* Mensajes de error */
+.mensaje-error {
+    color: #f90404;
+    font-size: 0.75rem;
+    margin-top: 4px;
+    display: none; /* Se activa con JS cuando hay error */
+}
+
+/* Botón Guardar */
+#registroForm button[type="submit"] {
+    grid-column: 1 / -1;
+    background-color: #7e0f0f;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#registroForm button[type="submit"]:hover {
+    background-color: #d42828;
+}
+
+/* Estilos generales de la página */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  color: #333333;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Título principal de la página */
+h1 {
+  text-align: center;
+  color: #960707c0;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+/* Contenedor principal del formulario */
+.formulario {
+  max-width: 650px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Subtítulo dentro del formulario */
+.formulario h2 {
+  color: #8b0a06a8;
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 20px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 10px;
+}
+
+/* Etiquetas de los campos */
+.formulario label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #9703039d;
+  margin-bottom: 6px;
+}
+
+/* Campos de texto, selectores y fechas */
+.formulario input[type="text"],
+.formulario input[type="date"],
+.formulario input[type="tel"],
+.formulario select {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 15px;
+  color: #9b0a0a85;
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box; /* Evita que el padding rompa el ancho */
+  transition: all 0.3s ease;
+}
+
+/* Efecto al hacer clic o enfocar un campo */
+.formulario input:focus,
+.formulario select:focus {
+  border-color: #ac0707a4;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(153, 2, 2, 0.651);
+}
+
+/* Contenedor de botones o estilo general para botones */
+.formulario button {
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+/* Botón de Guardar Registro */
+.formulario button[type="submit"] {
+  background-color: #b40505ab;
+  color: #ffffff;
+  width: 100%;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 12px rgba(235, 37, 37, 0.2);
+}
+
+.formulario button[type="submit"]:hover {
+  background-color: #c50d0db9;
+  transform: translateY(-1px);
+}
+
+/* Botón de Limpiar */
+.formulario button[type="reset"] {
+  background-color: #e2e8f0;
+  color: #475569;
+  width: 100%;
+}
+
+.formulario button[type="reset"]:hover {
+  background-color: #cbd5e1;
+}
+/* ==========================================
+   DISEÑO RESPONSIVO (MÓVILES)
+   ========================================== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .browser-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .browser-menu.active {
+        display: flex;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+    
+    .contenedor {
+        padding: 15px;
+    }
+}
+.btn-editar {
+    background-color: #9c0404b0;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.btn-eliminar {
+    background-color: #bb0808a6;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-editar:hover { background-color: #af0505a4; }
+.btn-eliminar:hover { background-color: #a300009a; }

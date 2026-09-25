@@ -1,0 +1,383 @@
+/* Estilos CSS */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--primary-bg);
+            background-image: radial-gradient(circle at center, #660606 0%, var(--primary-bg) 70%); /* Degradado radial sutil */
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Contenedor principal que simula la ventana del navegador */
+        .browser-mockup {
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 1200px;
+            background-color: var(--primary-bg);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        /* Barra de herramientas del navegador con botones y menu */
+        .browser-toolbar {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .browser-dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .browser-menu {
+            background-color: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 5px 20px;
+            display: flex;
+            gap: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .browser-menu a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 14px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .browser-menu a:hover {
+            opacity: 1;
+        }
+        /*Estilo de la imagen*/
+img{
+    border-radius: 10%;
+    border:3px solid #09090a;
+}
+
+        /* Contenido principal */
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        .logo-top {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-gold);
+            position: absolute;
+            top: 60px;
+            left: 40px;
+        }
+        body {
+            background-color: #3b0307; /* Color de fondo vino/oscuro de tu diseño */
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            position: relative;
+            width: 400px; /* Ajusta según el tamaño de tu diseño */
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Contenedor del círculo de neón (puedes adaptar tus efectos de brillo aquí) */
+        .neon-circle-wrapper {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto 0px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Simulación de los anillos de neón externos (opcional si ya usas una imagen de fondo para los anillos) */
+            border-radius: 50%;
+            box-shadow: 0 0 25px rgba(228, 9, 9, 0.6), inset 0 0 25px rgba(226, 231, 231, 0.6);
+             box-shadow: 0 0 50px rgba(202, 80, 76, 0.6), inset 0 0 50px rgba(226, 231, 231, 0.6);
+            
+            
+/* Los aros de neon con animacion */
+        .neon-rings-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .neon-ring {
+            position: absolute;
+            border-radius: 50%;
+            animation: ring-pulse 4s infinite secondary;
+        }
+
+        .ring-1 {
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--neon-pink);
+            box-shadow: 0 0 15px var(--neon-pink), inset 0 0 15px var(--neon-pink);
+            animation-delay: 0s;
+        }
+
+        .ring-2 {
+            width: 90%;
+            height: 90%;
+            border: 2px solid var(--neon-purple);
+            box-shadow: 0 0 15px var(--neon-purple), inset 0 0 15px var(--neon-purple);
+            animation-delay: 1s;
+        }
+
+        .ring-3 {
+            width: 80%;
+            height: 80%;
+            border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 15px var(--neon-blue), inset 0 0 15px var(--neon-blue);
+            animation-delay: 2s;
+        }
+
+        @keyframes ring-pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+        }
+         }
+
+        /* ESTE ES EL CONTENEDOR QUE RECORTA LA IMAGEN EN CÍRCULO */
+        .circle-image-container {
+            width: 210px;  /* Debe coincidir con el diámetro interior de tu círculo de neón */
+            height: 210px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            z-index: 2; /* Para que quede por encima del fondo pero dentro del anillo */
+        }
+
+        /* Estilo de la imagen para que se adapte perfectamente */
+        .circle-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Evita que la imagen se deforme */
+        }
+
+        /* Estilos del texto de tu interfaz */
+        .brand-title {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #e5b873;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+
+        /* Los aros de neon con animacion */
+        .neon-rings-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .neon-ring {
+            position: absolute;
+            border-radius: 50%;
+            animation: ring-pulse 4s infinite secondary;
+        }
+
+        .ring-1 {
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--neon-pink);
+            box-shadow: 0 0 15px var(--neon-pink), inset 0 0 15px var(--neon-pink);
+            animation-delay: 0s;
+        }
+
+        .ring-2 {
+            width: 90%;
+            height: 90%;
+            border: 2px solid var(--neon-purple);
+            box-shadow: 0 0 15px var(--neon-purple), inset 0 0 15px var(--neon-purple);
+            animation-delay: 1s;
+        }
+
+        .ring-3 {
+            width: 80%;
+            height: 80%;
+            border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 15px var(--neon-blue), inset 0 0 15px var(--neon-blue);
+            animation-delay: 2s;
+        }
+
+        @keyframes ring-pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+        }
+
+        /* Textos centrales */
+        .hero-text {
+            text-align: center;
+            max-width: 600px;
+            z-index: 10;
+        }
+
+        .welcome-tag {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0 0 15px 0;
+            line-height: 1.2;
+        }
+
+        h1 span.gradient-text {
+    background: linear-gradient(to right, var(--neon-pink), var(--neon-purple));
+    background-clip: text;                  /* Propiedad estándar necesaria */
+    -webkit-background-clip: text;          /* Compatibilidad para Chrome/Safari */
+    -webkit-text-fill-color: transparent;   /* Oculta el relleno de texto tradicional */
+}
+        .description {
+            font-size: 16px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Botones de accion */
+        .cta-container {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            padding: 10px 25px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-bg);
+            color: var(--text-main);
+            border: 2px solid var(--neon-pink);
+            box-shadow: 0 0 10px rgba(255, 0, 85, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(255, 0, 85, 0.5);
+        }
+
+        .btn-secondary {
+            background-color: rgba(255,255,255,0.1);
+            color: var(--text-main);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        /* Pie de pagina */
+        footer {
+            padding: 20px 40px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            text-align: center;
+        }
+
+        .copyright {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .footer-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .logo-gov {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-gold);
+            font-size: 12px;
+            text-align: left;
+        }
+
+        .logo-gov img {
+            height: 30px;
+        }
+
+        .logo-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: var(--text-gold);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .logo-state img {
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .slogan {
+            font-size: 15px;
+            font-weight: normal;
+            font-style: italic;
+        }

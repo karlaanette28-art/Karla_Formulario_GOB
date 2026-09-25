@@ -1,0 +1,409 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f5f9;
+    color: #a30909c8;
+}
+
+
+/* =========================================
+   CONTENEDOR
+========================================= */
+
+.contenedor {
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    background: #830606b4;
+    min-height: 65px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 40px;
+
+    color: white;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.browser-menu {
+    margin-left: auto;
+
+    display: flex;
+    gap: 25px;
+}
+
+.browser-menu a {
+    color: rgb(83, 4, 9);
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.browser-menu a:hover {
+    color: #8f0202;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 40px auto;
+}
+
+h1 {
+    text-align: center;
+
+    color: #5e0f0f;
+
+    margin-bottom: 30px;
+
+    font-size: 32px;
+}
+
+
+/* =========================================
+   FORMULARIO
+========================================= */
+
+.formulario {
+    background: white;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(157, 7, 7, 0.702);
+}
+
+.formulario h2 {
+    color: #9f0707bc;
+
+    font-size: 21px;
+
+    margin-bottom: 25px;
+
+    padding-bottom: 10px;
+
+    border-bottom: 2px solid #e2e8f0;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.grid-formulario {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px 25px;
+}
+
+
+/* =========================================
+   CAMPOS
+========================================= */
+
+.campo {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.campo label {
+    font-weight: bold;
+
+    color: #b43333;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   INPUTS Y SELECT
+========================================= */
+
+.campo input,
+.campo select {
+    width: 100%;
+
+    height: 45px;
+
+    padding: 10px 13px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 7px;
+
+    background: #fff;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: #5c0202;
+
+    box-shadow: 0 0 0 3px rgba(199, 2, 2, 0.367);
+}
+
+
+/* =========================================
+   PLACEHOLDER
+========================================= */
+
+.campo input::placeholder {
+    color: #ca7171;
+}
+
+
+/* =========================================
+   GÉNERO
+========================================= */
+
+.campo-genero {
+    justify-content: center;
+}
+
+.opciones-radio {
+    display: flex;
+
+    gap: 25px;
+
+    align-items: center;
+
+    height: 45px;
+}
+
+.opciones-radio label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-weight: normal;
+
+    cursor: pointer;
+}
+
+.opciones-radio input {
+    width: auto;
+
+    height: auto;
+}
+
+
+/* =========================================
+   MENSAJES DE ERROR
+========================================= */
+
+.mensaje-error {
+    display: none;
+
+    color: #dc2626;
+
+    font-size: 12px;
+}
+
+.campo.error input,
+.campo.error select {
+    border-color: #dc2626;
+
+    background: #fef2f2;
+}
+
+.campo.error .mensaje-error {
+    display: block;
+}
+
+
+/* =========================================
+   BOTONES
+========================================= */
+
+.botones {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    margin-top: 30px;
+
+    margin-bottom: 40px;
+}
+
+.botones button {
+    border: none;
+
+    border-radius: 7px;
+
+    padding: 13px 30px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* BOTÓN GUARDAR */
+
+.btn-guardar {
+    background: #760f0f;
+
+    color: white;
+}
+
+.btn-guardar:hover {
+    background: #e91212;
+
+    transform: translateY(-2px);
+}
+
+
+/* BOTÓN LIMPIAR */
+
+.btn-limpiar {
+    background: #8b6464;
+
+    color: white;
+}
+
+.btn-limpiar:hover {
+    background: #e84343d3;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .browser-menu {
+        gap: 12px;
+    }
+
+    .grid-formulario {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        width: 94%;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 15px;
+    }
+
+    .browser-menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+
+        margin-left: auto;
+
+        background: transparent;
+
+        border: none;
+
+        color: white;
+
+        font-size: 25px;
+
+        cursor: pointer;
+    }
+
+    main {
+        width: 95%;
+
+        margin: 25px auto;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .formulario {
+        padding: 20px;
+    }
+
+    .formulario h2 {
+        font-size: 18px;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+
+    .botones button {
+        width: 100%;
+    }
+
+}

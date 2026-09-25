@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Nuevo Ingreso</title>
+    <link rel="stylesheet" href="../modelo/Registro.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <header>
+            <nav class="navbar">
+                <a href="#" class="logo">Menu</a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">☰</button>
+                <div class="browser-menu" id="nav-links">
+                    <a href="inicio.html">Inicio</a>
+                    <a href="Registro de personas.html">Registro de personas</a>
+                    <a href="base de registros.html">Bases de datos</a>
+                </div>
+            </nav>
+        </header>
+
+        <h1>Registro de Personal de Nuevo Ingreso </h1>
+        <br>
+        <a href="../controlador/Exportar_excel.php" style="background-color: #107c41; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; display: inline-block; font-weight: bold; font-family: Arial, sans-serif; box-shadow: 0px 2px 4px rgba(0,0,0,0.2);">
+    🟢 Descargar Reporte Excel Completo
+</a>
+
+        <!-- CORRECCIÓN: El formulario abre aquí y envuelve todo -->
+        <form action="../controlador/Formulario_de_Registro.php" method="POST">
+            
+
+            <div class="formulario">
+                <h2>Registrar persona:</h2>   
+
+                <!-- CORRECCIÓN: name cambiado a 'Apellido_Paterno' -->
+                <label for="apellido_paterno">Apellido Paterno:</label>
+                <input type="text" id="apellido_paterno" name="Apellido_Paterno" required>
+                <br><br>
+
+                <!-- CORRECCIÓN: name cambiado a 'Apellido_Materno' -->
+                <label for="apellido_materno">Apellido Materno:</label>
+                <input type="text" id="apellido_materno" name="Apellido_Materno" required>
+                <br><br>
+
+                <!-- CORRECCIÓN: name cambiado a 'Nombre' -->
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="Nombre" required>
+                <br><br>
+
+                <!-- CORRECCIÓN: name cambiado a 'RFC' -->
+                <label for="rfc">RFC:</label>
+                <input type="text" id="rfc" name="RFC" maxlength="13" required>
+                <br><br>
+
+                <!-- CORRECCIÓN: name cambiado a 'CURP' -->
+                <label for="curp">CURP:</label>
+                <input type="text" id="curp" name="CURP" maxlength="18" required>
+                <br><br>
+
+                <!-- CORRECCIÓN: name cambiado a 'Fecha_de_Nacimiento' -->
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="Fecha_de_Nacimiento" required>
+                <br><br>
+
+                <!-- CORRECCIÓN: name cambiado a 'Escolaridad' -->
+                <label for="escolaridad">Escolaridad:</label>
+                <select id="escolaridad" name="Escolaridad" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="Primaria">Primaria</option>
+                    <option value="Secundaria">Secundaria</option>
+                    <option value="Preparatoria">Preparatoria</option>
+                    <option value="Universidad">Universidad</option>
+                    <option value="Posgrado">Posgrado</option>
+                </select>
+                <br><br>
+
+                <!-- CORRECCIÓN: name cambiado a 'Estado_Civil' (sin espacios) -->
+                <label for="estado_civil">Estado Civil:</label>
+                <input type="text" id="estado_civil" name="Estado_Civil" required>
+                <br><br>
+
+                <!-- CORRECCIÓN: name cambiado a 'Colonia' -->
+                <label for="colonia">Colonia:</label>
+                <input type="text" id="colonia" name="Colonia" required>
+                <br><br>
+
+                <!-- CORRECCIÓN: name cambiado a 'Calle' -->
+                <label for="calle">Calle:</label>
+                <input type="text" id="calle" name="Calle" required>
+                <br><br>
+
+                <!-- CORRECCIÓN: name cambiado a 'Municipio' -->
+                <label for="municipio">Municipio:</label>
+                <input type="text" id="municipio" name="Municipio" required>
+                <br><br>
+
+                <!-- CORRECCIÓN: name cambiado a 'Codigo_Postal' -->
+                <label for="codigo_postal">Código Postal:</label>
+                <input type="text" id="codigo_postal" name="Codigo_Postal" maxlength="5" required>
+                <br><br>
+
+                <!-- Mantiene name='Telefono' tal como lo tenías en tu PHP -->
+                <label for="celular">Teléfono:</label>
+                <input type="tel" id="celular" name="Telefono" maxlength="10" required>
+                <br><br>
+         <form action="../controlador/Formulario_de_Registro.php" method="POST">
+
+    <!-- todos tus campos -->
+
+    <button type="submit">
+        Guardar Registro
+    </button>
+
+    <button type="reset">
+        Limpiar
+    </button>
+
+</form>
+    </div>
+
+</body>
+</html>
